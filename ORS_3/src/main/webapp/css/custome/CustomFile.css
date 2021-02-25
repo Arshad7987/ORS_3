@@ -1,0 +1,29 @@
+@CHARSET "ISO-8859-1";
+
+ body{
+/* 	marign:0;
+	padding:0; */
+	background: url(https://mdbootstrap.com/img/Photos/Others/images/93b.jpg) no-repeat center center fixed;
+	background-blend-mode: overlay;
+	background-color: rgba(0,0,0,0.2);
+	font-family: 'Varela Round', sans-serif;
+	font-size: 16px;
+}
+header{
+	
+/* 	background: url(https://mdbootstrap.com/img/Photos/Others/images/93b.jpg) no-repeat center center fixed;  */
+	/* background-color: rgba(0,0,0,0.2);
+	background-blend-mode: overlay; */
+/* 	color:#fff; */
+	padding:100px 0px;
+	
+	/* box-sizing: border-box; */
+}
+
+.banner-title{
+	
+	font-family: 'Comic Sans MS', cursive;
+	font-weight: 1000;
+	font-size: 50px;
+	margin-top:50px;
+}

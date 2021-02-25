@@ -1,0 +1,44 @@
+/* @CHARSET "ISO-8859-1";
+.foot{
+	fixed-bottom;
+}
+
+
+@media (min-width:375px) and (max-width:812px) {
+.footer375 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 400px) and (max-width: 1024px) {
+
+.nfooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+} */

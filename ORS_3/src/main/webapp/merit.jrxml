@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="merit" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="865062b9-f6aa-4888-852f-c99ad42981d9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="262"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="728"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DAdapter"/>
+	<style name="Sample Text" mode="Transparent" forecolor="#FF003B" backcolor="#FF0066" hTextAlign="Left" vTextAlign="Top" rotation="None" fontName="Arial" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+	</style>
+	<style name="Sample Text 1" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" hTextAlign="Left" vTextAlign="Top" rotation="None" fontName="Arial" fontSize="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+	</style>
+	<style name="Sample Text 2" mode="Transparent" forecolor="#FF003B" backcolor="#FF0066" hTextAlign="Left" vTextAlign="Top" rotation="None" fontName="Arial" fontSize="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+	</style>
+	<style name="Sample Text 3" mode="Transparent" forecolor="#0011FF" backcolor="#0040FF" hTextAlign="Left" vTextAlign="Top" rotation="None" fontName="Arial" fontSize="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select ROLLNO,NAME,physics,chemistry,maths,physics+chemistry+maths as total from st_marksheet where physics>32 and chemistry>32 and maths>32 order by total desc limit 0,10]]>
+	</queryString>
+	<field name="ROLLNO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ROLLNO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="physics" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="physics"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="chemistry" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="chemistry"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="maths" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="maths"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="total" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+	</field>
+	<group name="ROLLNO">
+		<groupExpression><![CDATA[$F{ROLLNO}]]></groupExpression>
+	</group>
+	<group name="NAME">
+		<groupExpression><![CDATA[$F{NAME}]]></groupExpression>
+	</group>
+	<group name="physics">
+		<groupExpression><![CDATA[$F{physics}]]></groupExpression>
+	</group>
+	<group name="chemistry">
+		<groupExpression><![CDATA[$F{chemistry}]]></groupExpression>
+	</group>
+	<group name="maths">
+		<groupExpression><![CDATA[$F{maths}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement style="Sample Text 2" x="200" y="50" width="130" height="20" uuid="9a2dbdf9-e567-402e-a3b7-d7146046aa55"/>
+				<text><![CDATA[Marksheet Merit List ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="200" y="1" width="100" height="19" uuid="a63f8869-2361-4473-a94c-dc8afd89cc56"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement style="Sample Text 3" x="0" y="0" width="60" height="30" uuid="da00a015-fffd-4c26-b690-df55a8d5c2a2"/>
+				<text><![CDATA[Roll No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sample Text 3" x="80" y="0" width="70" height="30" uuid="3462b4b1-6c73-4bd0-a9c8-5f591b3f0565"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sample Text 3" x="180" y="0" width="80" height="30" uuid="34f159c4-5da8-4684-98ec-852c881d0e97"/>
+				<text><![CDATA[Physics]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sample Text 3" x="280" y="1" width="80" height="30" uuid="d2afddfe-9959-4c3a-a333-a4fdcbc182f0"/>
+				<text><![CDATA[Chemistry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sample Text 3" x="380" y="0" width="80" height="30" uuid="7e751112-b6f9-441b-b942-c198f6f03e35"/>
+				<text><![CDATA[Maths]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Sample Text 3" x="480" y="2" width="64" height="30" uuid="4e702ccb-fa6e-48bc-852c-96593c35afec"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="30" uuid="50144d93-c34d-43b1-99ae-e56c4f04c3e3"/>
+				<textFieldExpression><![CDATA[$F{ROLLNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="532cb6cb-057a-438a-a546-f6a6815f9e7c"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="80" height="30" uuid="989a2220-2693-4714-b10d-bc434d03b3b1"/>
+				<textFieldExpression><![CDATA[$F{physics}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="2" width="80" height="30" uuid="c415f732-1886-44a7-8210-f81aac4e4254"/>
+				<textFieldExpression><![CDATA[$F{chemistry}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="1" width="80" height="30" uuid="df1680ae-a2bf-4e0f-97c2-a61ec142c505"/>
+				<textFieldExpression><![CDATA[$F{maths}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="2" width="60" height="29" uuid="31b9e47f-ee43-4e36-9fc0-8bf9dfb4c594"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="11" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>
